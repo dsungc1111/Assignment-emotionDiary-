@@ -91,20 +91,9 @@ class arraySolutionViewController: UIViewController {
     }
     
     @IBAction func firstRecommendButtonTapped(_ sender: UIButton) {
-        compareWord(button: firstRecommendButton)
+        compareWord(button: sender)
     }
     
-    @IBAction func secondRecommendButtonTapped(_ sender: UIButton) {
-        compareWord(button: secondRecommendButton)
-    }
-    
-    @IBAction func thirdRecommendButtonTapped(_ sender: UIButton) {
-            compareWord(button: thirdRecommendButton)
-    }
-    
-    @IBAction func fourthRecommendButtonTapped(_ sender: UIButton) {
-        compareWord(button: fourthRecommendButton)
-    }
     
     
     func compareWord(button: UIButton) {

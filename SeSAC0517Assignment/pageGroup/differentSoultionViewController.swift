@@ -101,21 +101,9 @@ class differentSoultionViewController: UIViewController {
 
     @IBAction func firstRecommendButtonTapped(_ sender: UIButton) {
        
-        changeAfterClickNewWordButton(keyword: firstRecommendWordButton)
+        changeAfterClickNewWordButton(keyword: sender)
     }
     
-    
-    @IBAction func secondRecommendButtonTapped(_ sender: UIButton) {
-        changeAfterClickNewWordButton(keyword: secondRecommedWordButton)
-    }
-    
-    @IBAction func thirdRecommendButtonTapped(_ sender: UIButton) {
-        changeAfterClickNewWordButton(keyword: thirdRecommendWordButton)
-    }
-    
-    @IBAction func fourthRecommendButtonTapped(_ sender: UIButton) {
-        changeAfterClickNewWordButton(keyword: fourthRecommendWordButton)
-    }
     
     
     func changeAfterClickNewWordButton(keyword: UIButton) {
