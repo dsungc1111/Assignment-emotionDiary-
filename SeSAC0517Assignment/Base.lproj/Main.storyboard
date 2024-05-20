@@ -23,28 +23,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Tc2-Ag-NzC">
                                 <rect key="frame" x="42" y="377" width="309" height="90"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9T-Nd-piw">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9T-Nd-piw">
                                         <rect key="frame" x="0.0" y="0.0" width="93" height="90"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="embarraseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BXG-sI-bnC"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kMS-E5-heL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7z-e9-cMB">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7z-e9-cMB">
                                         <rect key="frame" x="108" y="0.0" width="93" height="90"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="upsetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ly7-si-yb9"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QBk-Dv-Yhl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uso-Bh-x4x">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uso-Bh-x4x">
                                         <rect key="frame" x="216" y="0.0" width="93" height="90"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="depressButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="seE-0M-kL2"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zrD-Kg-bwC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -86,23 +86,23 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="happyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4pr-E4-aY5"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GSI-8r-7Jl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sn1-Ka-GRF">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sn1-Ka-GRF">
                                         <rect key="frame" x="108" y="0.0" width="93" height="90"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="loveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0iQ-KH-xEf"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PYI-NM-5cF"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umw-XH-XxV">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umw-XH-XxV">
                                         <rect key="frame" x="216" y="0.0" width="93" height="90"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="likeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ob-Rc-NEg"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F54-UH-iF1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -113,28 +113,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vsT-AQ-VqD">
                                 <rect key="frame" x="42" y="511" width="309" height="90"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9h9-LJ-sn4">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9h9-LJ-sn4">
                                         <rect key="frame" x="0.0" y="0.0" width="93" height="90"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="boringButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dbI-LO-npM"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nzW-T7-LcP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVi-Sf-q1i">
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVi-Sf-q1i">
                                         <rect key="frame" x="108" y="0.0" width="93" height="90"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="worryButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mtu-Sl-njY"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="daD-4c-OWn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQV-fy-7M8">
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQV-fy-7M8">
                                         <rect key="frame" x="216" y="0.0" width="93" height="90"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="sadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IzT-u5-1e7"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IlI-1s-ZS5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -249,6 +249,24 @@
                         <outlet property="upsetLabel" destination="pfh-4C-drS" id="wQ1-bl-m7R"/>
                         <outlet property="worryButton" destination="cVi-Sf-q1i" id="Els-tg-TTw"/>
                         <outlet property="worryLabel" destination="cz7-Uw-qcu" id="IqL-ij-ByD"/>
+                        <outletCollection property="labelList" destination="qYO-Xh-Ypz" collectionClass="NSMutableArray" id="gFy-Dt-7OH"/>
+                        <outletCollection property="labelList" destination="pJv-VY-6v7" collectionClass="NSMutableArray" id="f64-89-XDm"/>
+                        <outletCollection property="labelList" destination="Rsz-bv-YHa" collectionClass="NSMutableArray" id="07x-QI-Bu4"/>
+                        <outletCollection property="labelList" destination="arL-vd-LsR" collectionClass="NSMutableArray" id="xOW-Ne-3Km"/>
+                        <outletCollection property="labelList" destination="pfh-4C-drS" collectionClass="NSMutableArray" id="kFQ-6c-Og2"/>
+                        <outletCollection property="labelList" destination="UKi-Rm-kqY" collectionClass="NSMutableArray" id="KDb-ip-mSs"/>
+                        <outletCollection property="labelList" destination="oLi-fW-vNE" collectionClass="NSMutableArray" id="xSZ-Wq-626"/>
+                        <outletCollection property="labelList" destination="cz7-Uw-qcu" collectionClass="NSMutableArray" id="Qa0-Xk-mTP"/>
+                        <outletCollection property="labelList" destination="vk7-Wg-buP" collectionClass="NSMutableArray" id="Imb-JK-Axm"/>
+                        <outletCollection property="buttonList" destination="76r-pf-Ztg" collectionClass="NSMutableArray" id="Rgo-IY-b8Y"/>
+                        <outletCollection property="buttonList" destination="sn1-Ka-GRF" collectionClass="NSMutableArray" id="Kd1-6b-fgS"/>
+                        <outletCollection property="buttonList" destination="Umw-XH-XxV" collectionClass="NSMutableArray" id="Tao-vC-5fn"/>
+                        <outletCollection property="buttonList" destination="K9T-Nd-piw" collectionClass="NSMutableArray" id="Ctc-L7-1rV"/>
+                        <outletCollection property="buttonList" destination="s7z-e9-cMB" collectionClass="NSMutableArray" id="Cpy-7l-Uug"/>
+                        <outletCollection property="buttonList" destination="Uso-Bh-x4x" collectionClass="NSMutableArray" id="ua3-0h-vlb"/>
+                        <outletCollection property="buttonList" destination="9h9-LJ-sn4" collectionClass="NSMutableArray" id="0b6-fK-U0n"/>
+                        <outletCollection property="buttonList" destination="cVi-Sf-q1i" collectionClass="NSMutableArray" id="JN1-C4-54a"/>
+                        <outletCollection property="buttonList" destination="gQV-fy-7M8" collectionClass="NSMutableArray" id="4Ta-L6-vg8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
