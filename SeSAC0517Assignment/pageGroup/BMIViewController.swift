@@ -25,10 +25,6 @@ class BMIViewController: UIViewController {
     
     @IBOutlet var resultButton: UIButton!
     
-    let peopleHeight = [160, 165, 170, 175, 180, 185, 190, 195]
-    
-    let peopleWeight = [35.9, 40.6, 45.1, 50.7, 55.4, 60.8, 65.7, 70.1, 75.7, 80.9, 85.6, 90.1, 95.6, 100.0 ]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,22 +32,25 @@ class BMIViewController: UIViewController {
         bmiTitle()
         userInfomation()
         resultBMI()
-        
-        
     }
     
     func bmiTitle() {
-        bmiTitleLabel.text = "BMI Calculator"
+        bmiTitleLabelFunction(title: bmiTitleLabel, phrase: "BMI Calculator")
         bmiTitleLabel.textAlignment = .left
         bmiTitleLabel.font = .systemFont(ofSize: 30, weight: .bold, width: .compressed)
-        bmiSubTitleLabel.text = "당신의 BMI 지수를\n알려드릴게요"
+        bmiTitleLabelFunction(title: bmiSubTitleLabel, phrase: "당신의 BMI 지수를 알려드릴게요.")
         bmiSubTitleLabel.numberOfLines = 0
         bmiSubTitleLabel.font = .systemFont(ofSize: 15, weight: .regular)
         bmiImageView.image = UIImage.bmi
+        
         let eyeimage = UIImage(systemName: "eye.slash")
         revealPWButton.setImage(eyeimage, for: .normal)
-        
     }
+    func bmiTitleLabelFunction(title: UILabel, phrase: String){
+        title.text = phrase
+    }
+    
+    
     
     func userInfomation() {
         bodySizeInfomationLabel(size: heightLabel, wording: "키가 어떻게 되시나요?")
@@ -77,6 +76,7 @@ class BMIViewController: UIViewController {
         randomButton.titleLabel?.font = .systemFont(ofSize: 12)
     }
     
+    
     func resultBMI() {
         resultButton.setTitle("결과 확인", for: .normal)
         resultButton.setTitleColor(.white, for: .normal)
@@ -94,10 +94,11 @@ class BMIViewController: UIViewController {
     
     
     @IBAction func randomButtonTapped(_ sender: UIButton) {
-        var randomNumer = Int.random(in: 0...peopleHeight.count-1)
-        heightTextField.text = "\(peopleHeight[randomNumer])"
-        randomNumer = Int.random(in: 0...peopleWeight.count-1)
-        weightTextField.text = "\(peopleWeight[randomNumer])"
+        var peopleHeight = Double.random(in: 140...210)
+        var peopleWeight = Double.random(in: 35...140)
+        
+        heightTextField.text = "\(String(format: "%.2f", peopleHeight))"
+        weightTextField.text = "\(String(format: "%.f", peopleWeight))"
         resultButtonTapped(resultButton)
     }
     
@@ -109,12 +110,8 @@ class BMIViewController: UIViewController {
         if heightTextField.text == "" || weightTextField.text == "" || Double(heightTextField.text!) == nil ||
             Double(weightTextField.text!) == nil || (Double(heightTextField.text!)! < 90 && Double(heightTextField.text!)! > 210) || (Double(weightTextField.text!)! < 30 && Double(weightTextField.text!)! > 150) {
             resultMessage = "다시 입력해주세요!!"
-            
-            
         } else {
-            let height = Double(heightTextField.text!)!
-            let weight = Double(weightTextField.text!)!
-            let bmi = weight / (height * height) * 10000
+            var bmi = calculateBMI()
             switch bmi {
             case ..<18.5:
                 resultMessage = "저체중입니다."
@@ -139,6 +136,24 @@ class BMIViewController: UIViewController {
         alert.addAction(cancelButton)
         present(alert, animated: true)
     }
+    
+    func calculateBMI() -> Double{
+        let height = Double(heightTextField.text!)!
+        let weight = Double(weightTextField.text!)!
+        let bmi = weight / (height * height) * 10000
+        return bmi
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     @IBAction func keyboardDismiss(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
