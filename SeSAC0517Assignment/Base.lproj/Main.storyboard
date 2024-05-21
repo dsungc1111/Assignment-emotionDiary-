@@ -735,6 +735,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ntt-Y6-HOB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="lua-WG-gQZ" firstAttribute="top" secondItem="iQr-2b-fHH" secondAttribute="bottom" constant="3" id="0c8-yF-K5W"/>
                             <constraint firstItem="ZJw-ZF-vpC" firstAttribute="leading" secondItem="Ntt-Y6-HOB" secondAttribute="leading" constant="60" id="4zG-Ti-Xt1"/>
@@ -773,6 +774,9 @@
                             <constraint firstItem="Ntt-Y6-HOB" firstAttribute="trailing" secondItem="sBd-0Q-4Bj" secondAttribute="trailing" constant="40" id="yhn-rO-ATp"/>
                             <constraint firstItem="iQr-2b-fHH" firstAttribute="leading" secondItem="Ntt-Y6-HOB" secondAttribute="leading" constant="45" id="ymT-vo-Iks"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xTI-Nb-Nn0" appends="YES" id="47l-LJ-jXK"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="BMI" image="opticaldiscdrive" catalog="system" id="imu-Fu-kf0"/>
                     <connections>
@@ -790,6 +794,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ky-mX-1ne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xTI-Nb-Nn0">
+                    <connections>
+                        <action selector="keyboardDismiss:" destination="Zch-qi-Kkz" id="GqP-mC-Med"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2494" y="1142"/>
         </scene>

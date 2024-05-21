@@ -38,6 +38,7 @@ class BMIViewController: UIViewController {
         userInfomation()
         resultBMI()
         
+        
     }
     
     func bmiTitle() {
@@ -58,6 +59,7 @@ class BMIViewController: UIViewController {
         bodySizeInfomationLabel(size: weightLabel, wording: "몸무게는 어떻게 되시나요?")
         inputBodySize(input: heightTextField)
         inputBodySize(input: weightTextField)
+        
         randomBMI()
     }
     
@@ -66,6 +68,8 @@ class BMIViewController: UIViewController {
         size.font = .systemFont(ofSize: 14, weight: .regular)
     }
     func inputBodySize(input: UITextField) {
+        input.becomeFirstResponder()
+        input.keyboardType = .decimalPad
         input.layer.borderWidth = 2
         input.layer.cornerRadius = 10
     }
@@ -137,7 +141,9 @@ class BMIViewController: UIViewController {
         
     }
     
-    
+    @IBAction func keyboardDismiss(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
     
     
 }
