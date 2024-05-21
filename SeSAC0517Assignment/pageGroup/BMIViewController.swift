@@ -105,7 +105,13 @@ class BMIViewController: UIViewController {
     
     @IBAction func resultButtonTapped(_ sender: UIButton) {
         
-        if heightTextField.text != nil && weightTextField.text != nil {
+        
+        if heightTextField.text == "" || weightTextField.text == "" || Double(heightTextField.text!) == nil ||
+            Double(weightTextField.text!) == nil || (Double(heightTextField.text!)! < 90 && Double(heightTextField.text!)! > 210) || (Double(weightTextField.text!)! < 30 && Double(weightTextField.text!)! > 150) {
+            resultLabel.text = "다시 입력해주세요!!"
+            
+            
+        } else {
             let height = Double(heightTextField.text!)!
             let weight = Double(weightTextField.text!)!
             let bmi = weight / (height * height) * 10000
