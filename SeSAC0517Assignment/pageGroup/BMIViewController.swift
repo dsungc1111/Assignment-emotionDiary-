@@ -24,7 +24,6 @@ class BMIViewController: UIViewController {
     @IBOutlet var randomButton: UIButton!
     
     @IBOutlet var resultButton: UIButton!
-    @IBOutlet var resultLabel: UILabel!
     
     let peopleHeight = [160, 165, 170, 175, 180, 185, 190, 195]
     
@@ -59,7 +58,6 @@ class BMIViewController: UIViewController {
         bodySizeInfomationLabel(size: weightLabel, wording: "몸무게는 어떻게 되시나요?")
         inputBodySize(input: heightTextField)
         inputBodySize(input: weightTextField)
-        
         randomBMI()
     }
     
@@ -86,9 +84,6 @@ class BMIViewController: UIViewController {
         resultButton.backgroundColor = .purple
         resultButton.layer.borderWidth = 1
         resultButton.layer.cornerRadius = 10
-        resultLabel.textAlignment = .center
-        resultLabel.font = .boldSystemFont(ofSize: 20)
-        resultLabel.text = "결과는..!!"
     }
     
     
@@ -109,10 +104,11 @@ class BMIViewController: UIViewController {
     
     @IBAction func resultButtonTapped(_ sender: UIButton) {
         
+        var resultMessage = " "
         
         if heightTextField.text == "" || weightTextField.text == "" || Double(heightTextField.text!) == nil ||
             Double(weightTextField.text!) == nil || (Double(heightTextField.text!)! < 90 && Double(heightTextField.text!)! > 210) || (Double(weightTextField.text!)! < 30 && Double(weightTextField.text!)! > 150) {
-            resultLabel.text = "다시 입력해주세요!!"
+            resultMessage = "다시 입력해주세요!!"
             
             
         } else {
@@ -121,24 +117,27 @@ class BMIViewController: UIViewController {
             let bmi = weight / (height * height) * 10000
             switch bmi {
             case ..<18.5:
-                resultLabel.text = "저체중입니다."
+                resultMessage = "저체중입니다."
             case 18.5..<23:
-                resultLabel.text = "정상입니다."
+                resultMessage = "정상입니다."
             case 23..<25:
-                resultLabel.text = "비만전단계입니다."
+                resultMessage = "비만전단계입니다."
             case 25..<30:
-                resultLabel.text = "비만 1단계"
+                resultMessage = "비만 1단계"
             case 30..<35:
-                resultLabel.text = "비만 2단계"
+                resultMessage = "비만 2단계"
             case 35...:
-                resultLabel.text = "비만 3단계"
+                resultMessage = "비만 3단계"
             default:
                 break
             }
         }
-        
-        
-        
+        let alert = UIAlertController(title: "BMI결과", message: resultMessage, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "ok", style: .default)
+        let cancelButton = UIAlertAction(title: "cancel", style: .cancel)
+        alert.addAction(okButton)
+        alert.addAction(cancelButton)
+        present(alert, animated: true)
     }
     
     @IBAction func keyboardDismiss(_ sender: UITapGestureRecognizer) {

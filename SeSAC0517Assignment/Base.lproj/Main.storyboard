@@ -726,19 +726,12 @@
                                     <action selector="resultButtonTapped:" destination="Zch-qi-Kkz" eventType="touchUpInside" id="oJa-ue-1Dz"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJw-ZF-vpC">
-                                <rect key="frame" x="60" y="664" width="273" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ntt-Y6-HOB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="lua-WG-gQZ" firstAttribute="top" secondItem="iQr-2b-fHH" secondAttribute="bottom" constant="3" id="0c8-yF-K5W"/>
-                            <constraint firstItem="ZJw-ZF-vpC" firstAttribute="leading" secondItem="Ntt-Y6-HOB" secondAttribute="leading" constant="60" id="4zG-Ti-Xt1"/>
                             <constraint firstItem="lua-WG-gQZ" firstAttribute="trailing" secondItem="LyA-BF-fL8" secondAttribute="trailing" constant="10" id="60W-Oa-AsN"/>
                             <constraint firstItem="oA8-OQ-edb" firstAttribute="top" secondItem="Ntt-Y6-HOB" secondAttribute="top" constant="40" id="6yo-2I-zlm"/>
                             <constraint firstItem="lua-WG-gQZ" firstAttribute="leading" secondItem="Ntt-Y6-HOB" secondAttribute="leading" constant="40" id="87q-RI-pF7"/>
@@ -752,7 +745,6 @@
                             <constraint firstItem="LyA-BF-fL8" firstAttribute="top" secondItem="lua-WG-gQZ" secondAttribute="top" constant="5" id="QFH-qi-XbN"/>
                             <constraint firstItem="oA8-OQ-edb" firstAttribute="leading" secondItem="Ntt-Y6-HOB" secondAttribute="leading" constant="200" id="WjS-9e-jKj"/>
                             <constraint firstItem="Ntt-Y6-HOB" firstAttribute="trailing" secondItem="nim-58-YRk" secondAttribute="trailing" constant="220" id="YDf-47-gYg"/>
-                            <constraint firstItem="ZJw-ZF-vpC" firstAttribute="top" secondItem="Z6C-gY-Yus" secondAttribute="bottom" constant="60" id="ZfU-gV-xhd"/>
                             <constraint firstItem="LyA-BF-fL8" firstAttribute="leading" secondItem="lua-WG-gQZ" secondAttribute="leading" constant="255" id="aQI-i6-hGk"/>
                             <constraint firstItem="Ntt-Y6-HOB" firstAttribute="trailing" secondItem="oA8-OQ-edb" secondAttribute="trailing" constant="40" id="b5Q-2V-Ol2"/>
                             <constraint firstItem="Z6C-gY-Yus" firstAttribute="top" secondItem="oIT-uN-hxC" secondAttribute="bottom" constant="60" id="f8i-0f-p11"/>
@@ -761,7 +753,6 @@
                             <constraint firstItem="Ntt-Y6-HOB" firstAttribute="top" secondItem="nim-58-YRk" secondAttribute="bottom" constant="-100" id="mgu-Ni-fo8"/>
                             <constraint firstItem="lua-WG-gQZ" firstAttribute="bottom" secondItem="LyA-BF-fL8" secondAttribute="bottom" constant="5" id="nWv-EE-Dc3"/>
                             <constraint firstItem="nim-58-YRk" firstAttribute="leading" secondItem="Ntt-Y6-HOB" secondAttribute="leading" constant="40" id="o2U-MJ-aqC"/>
-                            <constraint firstItem="Ntt-Y6-HOB" firstAttribute="bottom" secondItem="ZJw-ZF-vpC" secondAttribute="bottom" constant="70" id="o2c-H9-VgG"/>
                             <constraint firstItem="sBd-0Q-4Bj" firstAttribute="top" secondItem="oA8-OQ-edb" secondAttribute="bottom" id="o3j-D8-yp2"/>
                             <constraint firstItem="oIT-uN-hxC" firstAttribute="top" secondItem="lua-WG-gQZ" secondAttribute="bottom" constant="10" id="oas-WN-4WI"/>
                             <constraint firstItem="HdT-Pj-fpJ" firstAttribute="top" secondItem="nim-58-YRk" secondAttribute="bottom" constant="115" id="r27-4a-OQ4"/>
@@ -769,7 +760,6 @@
                             <constraint firstItem="zdf-aW-ClO" firstAttribute="top" secondItem="Ntt-Y6-HOB" secondAttribute="top" constant="20" id="sZO-9B-AqE"/>
                             <constraint firstItem="Z6C-gY-Yus" firstAttribute="leading" secondItem="Ntt-Y6-HOB" secondAttribute="leading" constant="40" id="sjB-Zz-0Bp"/>
                             <constraint firstItem="oIT-uN-hxC" firstAttribute="leading" secondItem="Ntt-Y6-HOB" secondAttribute="leading" constant="200" id="wAW-fz-5gs"/>
-                            <constraint firstItem="Ntt-Y6-HOB" firstAttribute="trailing" secondItem="ZJw-ZF-vpC" secondAttribute="trailing" constant="60" id="wvo-7S-kjJ"/>
                             <constraint firstItem="Ntt-Y6-HOB" firstAttribute="trailing" secondItem="lua-WG-gQZ" secondAttribute="trailing" constant="40" id="y9U-Cq-pL1"/>
                             <constraint firstItem="Ntt-Y6-HOB" firstAttribute="trailing" secondItem="sBd-0Q-4Bj" secondAttribute="trailing" constant="40" id="yhn-rO-ATp"/>
                             <constraint firstItem="iQr-2b-fHH" firstAttribute="leading" secondItem="Ntt-Y6-HOB" secondAttribute="leading" constant="45" id="ymT-vo-Iks"/>
@@ -787,7 +777,6 @@
                         <outlet property="heightTextField" destination="sBd-0Q-4Bj" id="UYE-QD-fsF"/>
                         <outlet property="randomButton" destination="oIT-uN-hxC" id="FaG-YM-oLV"/>
                         <outlet property="resultButton" destination="Z6C-gY-Yus" id="kUd-2a-ktP"/>
-                        <outlet property="resultLabel" destination="ZJw-ZF-vpC" id="Lbo-iN-dVd"/>
                         <outlet property="revealPWButton" destination="LyA-BF-fL8" id="Tvc-eV-qKQ"/>
                         <outlet property="weightLabel" destination="iQr-2b-fHH" id="5By-WL-eUL"/>
                         <outlet property="weightTextField" destination="lua-WG-gQZ" id="sn9-hI-4N2"/>
