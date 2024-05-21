@@ -98,7 +98,7 @@ class BMIViewController: UIViewController {
         var peopleWeight = Double.random(in: 35...140)
         
         heightTextField.text = "\(String(format: "%.2f", peopleHeight))"
-        weightTextField.text = "\(String(format: "%.f", peopleWeight))"
+        weightTextField.text = "\(String(format: "%.2f", peopleWeight))"
         resultButtonTapped(resultButton)
     }
     
