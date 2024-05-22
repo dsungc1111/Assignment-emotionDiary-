@@ -32,6 +32,7 @@ class BMIViewController: UIViewController {
         bmiTitle()
         userInfomation()
         resultBMI()
+        getLastInfomation()
     }
     
     func bmiTitle() {
@@ -49,9 +50,7 @@ class BMIViewController: UIViewController {
     func bmiTitleLabelFunction(title: UILabel, phrase: String){
         title.text = phrase
     }
-    
-    
-    
+
     func userInfomation() {
         bodySizeInfomationLabel(size: heightLabel, wording: "키가 어떻게 되시나요?")
         bodySizeInfomationLabel(size: weightLabel, wording: "몸무게는 어떻게 되시나요?")
@@ -86,6 +85,12 @@ class BMIViewController: UIViewController {
         resultButton.layer.cornerRadius = 10
     }
     
+    func getLastInfomation() {
+        let height = UserDefaults.standard.string(forKey: "height")
+        heightTextField.text = height
+        let weight = UserDefaults.standard.string(forKey: "weight")
+        weightTextField.text = weight
+    }
     
     
     @IBAction func revealButtonTapped(_ sender: UIButton) {
@@ -94,13 +99,18 @@ class BMIViewController: UIViewController {
     
     
     @IBAction func randomButtonTapped(_ sender: UIButton) {
-        var peopleHeight = Double.random(in: 140...210)
-        var peopleWeight = Double.random(in: 35...140)
-        
-        heightTextField.text = "\(String(format: "%.2f", peopleHeight))"
-        weightTextField.text = "\(String(format: "%.2f", peopleWeight))"
+        let peopleHeight = Double.random(in: 140...210)
+        let peopleWeight = Double.random(in: 35...140)
+        randomBodySize(body: heightTextField, size: peopleHeight)
+        randomBodySize(body: weightTextField, size: peopleWeight)
         resultButtonTapped(resultButton)
+        getBodyData()
     }
+    func randomBodySize(body: UITextField, size: Double) {
+        body.text = "\(String(format: "%.1f", size))"
+        body.text = "\(String(format: "%.1f", size))"
+    }
+    
     
     
     @IBAction func resultButtonTapped(_ sender: UIButton) {
@@ -111,20 +121,21 @@ class BMIViewController: UIViewController {
             Double(weightTextField.text!) == nil || (Double(heightTextField.text!)! < 90 && Double(heightTextField.text!)! > 210) || (Double(weightTextField.text!)! < 30 && Double(weightTextField.text!)! > 150) {
             resultMessage = "다시 입력해주세요!!"
         } else {
-            var bmi = calculateBMI()
+            let bmi = calculateBMI()
+            let bmiString = String(format: "%.1f", bmi)
             switch bmi {
             case ..<18.5:
-                resultMessage = "저체중입니다."
+                resultMessage = "\(bmiString), 저체중입니다."
             case 18.5..<23:
-                resultMessage = "정상입니다."
+                resultMessage = "\(bmiString), 정상입니다."
             case 23..<25:
-                resultMessage = "비만전단계입니다."
+                resultMessage = "\(bmiString), 비만전단계입니다."
             case 25..<30:
-                resultMessage = "비만 1단계"
+                resultMessage = "\(bmiString), 비만 1단계"
             case 30..<35:
-                resultMessage = "비만 2단계"
+                resultMessage = "\(bmiString), 비만 2단계"
             case 35...:
-                resultMessage = "비만 3단계"
+                resultMessage = "\(bmiString), 비만 3단계"
             default:
                 break
             }
@@ -135,6 +146,7 @@ class BMIViewController: UIViewController {
         alert.addAction(okButton)
         alert.addAction(cancelButton)
         present(alert, animated: true)
+        getBodyData()
     }
     
     func calculateBMI() -> Double{
@@ -145,7 +157,10 @@ class BMIViewController: UIViewController {
     }
     
     
-    
+    func getBodyData() {
+        UserDefaults.standard.set(heightTextField.text, forKey: "height")
+        UserDefaults.standard.set(weightTextField.text, forKey: "weight")
+    }
     
     
     
