@@ -25,6 +25,7 @@ class BMIViewController: UIViewController {
     
     @IBOutlet var resultButton: UIButton!
     
+    var resultMessage: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +107,7 @@ class BMIViewController: UIViewController {
         resultButtonTapped(resultButton)
         getBodyData()
     }
+    
     func randomBodySize(body: UITextField, size: Double) {
         body.text = "\(String(format: "%.1f", size))"
         body.text = "\(String(format: "%.1f", size))"
@@ -115,13 +117,19 @@ class BMIViewController: UIViewController {
     
     @IBAction func resultButtonTapped(_ sender: UIButton) {
         
-        var resultMessage = " "
+        guard let height = Double(heightTextField.text!),
+              let weight = Double(weightTextField.text!) else {
+            resultMessage = "다시 입력해주세요!!"
+            return
+        }
         
-        if heightTextField.text == "" || weightTextField.text == "" || Double(heightTextField.text!) == nil ||
-            Double(weightTextField.text!) == nil || (Double(heightTextField.text!)! < 90 && Double(heightTextField.text!)! > 210) || (Double(weightTextField.text!)! < 30 && Double(weightTextField.text!)! > 150) {
+        let bmi = weight / (height*height) * 10000
+        
+        
+        
+        if heightTextField.text == "" || weightTextField.text == "" ||  (Double(heightTextField.text!)! < 90 && Double(heightTextField.text!)! > 210) || (Double(weightTextField.text!)! < 30 && Double(weightTextField.text!)! > 150) {
             resultMessage = "다시 입력해주세요!!"
         } else {
-            let bmi = calculateBMI()
             let bmiString = String(format: "%.1f", bmi)
             switch bmi {
             case ..<18.5:
@@ -139,40 +147,28 @@ class BMIViewController: UIViewController {
             default:
                 break
             }
+    }
+            
+            
+            let alert = UIAlertController(title: "BMI결과", message: resultMessage, preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "ok", style: .default)
+            let cancelButton = UIAlertAction(title: "cancel", style: .cancel)
+            alert.addAction(okButton)
+            alert.addAction(cancelButton)
+            present(alert, animated: true)
+            getBodyData()
+            
         }
-        let alert = UIAlertController(title: "BMI결과", message: resultMessage, preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "ok", style: .default)
-        let cancelButton = UIAlertAction(title: "cancel", style: .cancel)
-        alert.addAction(okButton)
-        alert.addAction(cancelButton)
-        present(alert, animated: true)
-        getBodyData()
+        
+        
+        func getBodyData() {
+            UserDefaults.standard.set(heightTextField.text, forKey: "height")
+            UserDefaults.standard.set(weightTextField.text, forKey: "weight")
+        }
+        
+        @IBAction func keyboardDismiss(_ sender: UITapGestureRecognizer) {
+            view.endEditing(true)
+        }
+        
+        
     }
-    
-    func calculateBMI() -> Double{
-        let height = Double(heightTextField.text!)!
-        let weight = Double(weightTextField.text!)!
-        let bmi = weight / (height * height) * 10000
-        return bmi
-    }
-    
-    
-    func getBodyData() {
-        UserDefaults.standard.set(heightTextField.text, forKey: "height")
-        UserDefaults.standard.set(weightTextField.text, forKey: "weight")
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    @IBAction func keyboardDismiss(_ sender: UITapGestureRecognizer) {
-        view.endEditing(true)
-    }
-    
-    
-}
