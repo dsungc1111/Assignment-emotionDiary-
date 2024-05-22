@@ -193,6 +193,17 @@
                                     <constraint firstAttribute="height" constant="25" id="g0d-oJ-6ja"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upA-48-A9z">
+                                <rect key="frame" x="170" y="166" width="74" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="upA-48-A9z" secondAttribute="height" multiplier="1:1" id="XOp-Y4-giL"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="De3-sL-H8l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -205,6 +216,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vsT-AQ-VqD" secondAttribute="trailing" constant="42" id="Hb8-iB-98Y"/>
                             <constraint firstItem="f01-cT-c4b" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Vim-aC-Ow9"/>
                             <constraint firstItem="C7s-iW-C9G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="Vlq-k3-LRE"/>
+                            <constraint firstItem="upA-48-A9z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="XWW-Eq-crJ"/>
+                            <constraint firstItem="hUo-xN-f7r" firstAttribute="top" secondItem="upA-48-A9z" secondAttribute="bottom" constant="28" id="YGL-Qc-P7Q"/>
                             <constraint firstItem="C7s-iW-C9G" firstAttribute="bottom" secondItem="Tc2-Ag-NzC" secondAttribute="top" constant="-20" id="eNm-71-AVA"/>
                             <constraint firstItem="Tc2-Ag-NzC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fdi-Tv-oQr"/>
                             <constraint firstItem="oq5-Dc-ow8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="g8C-IM-yDG"/>
@@ -214,11 +227,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tc2-Ag-NzC" secondAttribute="trailing" constant="42" id="j9X-NS-pD6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oq5-Dc-ow8" secondAttribute="trailing" constant="42" id="kdZ-zK-xEa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f01-cT-c4b" secondAttribute="bottom" id="lrq-5u-147"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="upA-48-A9z" secondAttribute="trailing" constant="170" id="mL8-ks-9Tk"/>
                             <constraint firstItem="f01-cT-c4b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nOM-k0-RoM"/>
                             <constraint firstItem="TsP-7g-D1a" firstAttribute="top" secondItem="vsT-AQ-VqD" secondAttribute="bottom" id="pZe-SU-RTE"/>
                             <constraint firstItem="Tc2-Ag-NzC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="pbD-Yx-mPQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f01-cT-c4b" secondAttribute="trailing" id="pyG-Dt-9Du"/>
                             <constraint firstItem="TsP-7g-D1a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="ssf-EE-W7Z"/>
+                            <constraint firstItem="upA-48-A9z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y29-jk-gPg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="감정 다이어리" id="XR9-nw-5cM">
@@ -246,6 +261,7 @@
                         <outlet property="likeLabel" destination="Rsz-bv-YHa" id="OVK-WU-j0C"/>
                         <outlet property="loveButton" destination="sn1-Ka-GRF" id="poR-Bd-fdo"/>
                         <outlet property="loveLabel" destination="pJv-VY-6v7" id="jPU-It-qnT"/>
+                        <outlet property="resetButton" destination="upA-48-A9z" id="EGd-0P-1Br"/>
                         <outlet property="sadButton" destination="gQV-fy-7M8" id="2gJ-br-iDf"/>
                         <outlet property="sadLabel" destination="vk7-Wg-buP" id="Zzs-UC-UbE"/>
                         <outlet property="upsetButton" destination="s7z-e9-cMB" id="3gs-1f-j55"/>
