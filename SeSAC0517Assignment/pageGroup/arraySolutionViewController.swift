@@ -35,7 +35,7 @@ class arraySolutionViewController: UIViewController {
    
     
     var randomNumber: Int = 0
-    
+    var count = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -88,8 +88,18 @@ class arraySolutionViewController: UIViewController {
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
         compareWord(button: searchWindowButton)
+        UserDefaults.standard.set(searchWindowTextField.text, forKey: "\(count)번")
+        let df = UserDefaults.standard.string(forKey: "\(count)번")
+        count += 1
+        print(df)
     }
-    
+    /**
+    0버 - ㅇㅁㄹㄴ               0번 -ㅇㄹㅇㄹ
+     1번 - ㅇㄹㅇㄴㄹ         1번
+     2번 - ㅇㄹㅇㄹㅇ
+     3번- 554543
+     
+     */
     @IBAction func firstRecommendButtonTapped(_ sender: UIButton) {
         compareWord(button: sender)
     }
@@ -97,14 +107,15 @@ class arraySolutionViewController: UIViewController {
     
     
     func compareWord(button: UIButton) {
-        if button != searchWindowButton{
+        if button != searchWindowButton {
             searchWindowTextField.text = button.currentTitle
         }
         resultImageView.image = UIImage.background
+        
         for i in 0...newWordArray.count-1 {
             if searchWindowTextField.text == newWordArray[i] {
                 resultTextField.text = explainWord[i]
-                recommendButton()
+                
                 break
             } else {
                 resultTextField.text = "다른 단어를 검색하세요!"

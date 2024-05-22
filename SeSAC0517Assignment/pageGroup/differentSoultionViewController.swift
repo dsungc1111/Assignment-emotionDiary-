@@ -11,6 +11,9 @@ import UIKit
 
 class differentSoultionViewController: UIViewController {
 
+    @IBOutlet var buttonList: [UIButton]!
+    
+    
     @IBOutlet var searchBoxTextField: UITextField!
     @IBOutlet var searchButton: UIButton!
     @IBOutlet var resultBoxTextField: UITextField!
@@ -29,7 +32,7 @@ class differentSoultionViewController: UIViewController {
     var newWordBox: [String : String] = ["삼귀자": "연애를 시작하기 전 썸 단계!", "갑분싸" : "갑자기 분위기가 싸해진다.", "누물보" : "누구 물어본 사람?", "분좋카" : "분위기 좋은 카페", "윰차" : "유명인과 무명인을 차별한다. ㅜ", "맛꿀마" : "맛있다"]
     
     var newRandomBox: Array<String> = []
-   
+    var count = 0
     
     
     override func viewDidLoad() {
@@ -96,8 +99,12 @@ class differentSoultionViewController: UIViewController {
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
         changeAfterClickNewWordButton(keyword: searchButton)
+        UserDefaults.standard.set(searchBoxTextField.text, forKey: "\(count)")
+        let word = UserDefaults.standard.string(forKey: "\(count)")
+        buttonList[count].setTitle(word, for: .normal)
+        count += 1
+        if count == 4 {count = 0}
     }
-    
 
     @IBAction func firstRecommendButtonTapped(_ sender: UIButton) {
        
@@ -120,7 +127,6 @@ class differentSoultionViewController: UIViewController {
                 resultBoxTextField.text = "다른 단어 검색해봐"
             }
         }
-        aboutRecommendButtonSetting()
         searchBoxTextField.resignFirstResponder()
     }
     

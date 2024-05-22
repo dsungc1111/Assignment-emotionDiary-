@@ -523,6 +523,10 @@
                         <outlet property="searchButton" destination="HEN-Ux-ns6" id="ev5-Ku-x5y"/>
                         <outlet property="secondRecommedWordButton" destination="1ai-c6-yYs" id="Wg1-Os-gjc"/>
                         <outlet property="thirdRecommendWordButton" destination="MBd-tp-cyz" id="C3H-tX-4T2"/>
+                        <outletCollection property="buttonList" destination="JzR-cr-Xk0" collectionClass="NSMutableArray" id="RfN-q4-gsW"/>
+                        <outletCollection property="buttonList" destination="1ai-c6-yYs" collectionClass="NSMutableArray" id="1kd-z8-yiC"/>
+                        <outletCollection property="buttonList" destination="MBd-tp-cyz" collectionClass="NSMutableArray" id="X6q-HR-cRl"/>
+                        <outletCollection property="buttonList" destination="YDG-4E-ckU" collectionClass="NSMutableArray" id="Z6r-k4-9mx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1IG-2q-uic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
