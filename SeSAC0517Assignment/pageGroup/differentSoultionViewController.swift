@@ -30,19 +30,16 @@ class differentSoultionViewController: UIViewController {
     
     
     var newWordBox: [String : String] = ["삼귀자": "연애를 시작하기 전 썸 단계!", "갑분싸" : "갑자기 분위기가 싸해진다.", "누물보" : "누구 물어본 사람?", "분좋카" : "분위기 좋은 카페", "윰차" : "유명인과 무명인을 차별한다. ㅜ", "맛꿀마" : "맛있다"]
-    
     var newRandomBox: Array<String> = []
     var count = 0
+    var array: [String?] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         baseDesign()
         aboutRecommendButtonSetting()
         searchBoxTextField.becomeFirstResponder()
-        
     }
     
     func baseDesign() {
@@ -63,7 +60,6 @@ class differentSoultionViewController: UIViewController {
     }
     
     func aboutRecommendButtonSetting () {
-        
         newRandomBox = Array(newWordBox.keys)
         setRecommendButton(button: firstRecommendWordButton)
         setRecommendButton(button: secondRecommedWordButton)
@@ -77,7 +73,6 @@ class differentSoultionViewController: UIViewController {
     }
     
     func setRecommendButton(button: UIButton) {
-      
         let randomNumber = Int.random(in: 0...newRandomBox.count-1)
         button.setTitle(newRandomBox[randomNumber], for: .normal)
         newRandomBox.remove(at: randomNumber)
@@ -98,16 +93,35 @@ class differentSoultionViewController: UIViewController {
     
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
+        
         changeAfterClickNewWordButton(keyword: searchButton)
         UserDefaults.standard.set(searchBoxTextField.text, forKey: "\(count)")
         let word = UserDefaults.standard.string(forKey: "\(count)")
-        buttonList[count].setTitle(word, for: .normal)
-        count += 1
-        if count == 4 {count = 0}
-    }
-
-    @IBAction func firstRecommendButtonTapped(_ sender: UIButton) {
+        array.append(word)
+        array = array.reversed()
        
+        if count != 0 {
+            for i in 0...count {
+                if i == 4 { break}
+                buttonList[i].setTitle(array[i], for: .normal)
+                print("")
+            }
+        } else {
+            buttonList[count].setTitle(array[count], for: .normal)
+        }
+        array = array.reversed()
+        count += 1
+       
+    }
+    
+    
+    
+   
+    
+    
+    
+    
+    @IBAction func firstRecommendButtonTapped(_ sender: UIButton) {
         changeAfterClickNewWordButton(keyword: sender)
     }
     
