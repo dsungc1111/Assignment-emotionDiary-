@@ -16,6 +16,7 @@
 		8B129EF92BF7A4CE005C866A /* NewWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B129EF82BF7A4CE005C866A /* NewWordViewController.swift */; };
 		8B7A6AE82BF9D374004CA564 /* differentSoultionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A6AE72BF9D374004CA564 /* differentSoultionViewController.swift */; };
 		8B7A6AEA2BFA1051004CA564 /* arraySolutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A6AE92BFA1051004CA564 /* arraySolutionViewController.swift */; };
+		8B806A2C2C0006F70066ACCC /* ReviewEmotionalDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B806A2B2C0006F70066ACCC /* ReviewEmotionalDiaryViewController.swift */; };
 		8BF0362D2BFC94FE00C41116 /* BMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF0362C2BFC94FE00C41116 /* BMIViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		8B129EF82BF7A4CE005C866A /* NewWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordViewController.swift; sourceTree = "<group>"; };
 		8B7A6AE72BF9D374004CA564 /* differentSoultionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = differentSoultionViewController.swift; sourceTree = "<group>"; };
 		8B7A6AE92BFA1051004CA564 /* arraySolutionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arraySolutionViewController.swift; sourceTree = "<group>"; };
+		8B806A2B2C0006F70066ACCC /* ReviewEmotionalDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEmotionalDiaryViewController.swift; sourceTree = "<group>"; };
 		8BF0362C2BFC94FE00C41116 /* BMIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 				8B7A6AE72BF9D374004CA564 /* differentSoultionViewController.swift */,
 				8B7A6AE92BFA1051004CA564 /* arraySolutionViewController.swift */,
 				8BF0362C2BFC94FE00C41116 /* BMIViewController.swift */,
+				8B806A2B2C0006F70066ACCC /* ReviewEmotionalDiaryViewController.swift */,
 			);
 			path = pageGroup;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				8B129EE92BF78DA0005C866A /* ViewController.swift in Sources */,
 				8B129EE52BF78DA0005C866A /* AppDelegate.swift in Sources */,
 				8B129EE72BF78DA0005C866A /* SceneDelegate.swift in Sources */,
+				8B806A2C2C0006F70066ACCC /* ReviewEmotionalDiaryViewController.swift in Sources */,
 				8B129EF92BF7A4CE005C866A /* NewWordViewController.swift in Sources */,
 				8B7A6AEA2BFA1051004CA564 /* arraySolutionViewController.swift in Sources */,
 			);
