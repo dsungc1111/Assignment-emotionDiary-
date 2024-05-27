@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -440,6 +441,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="100.5" height="76.5"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button" image="slime1"/>
+                                                <connections>
+                                                    <action selector="emotionButtonTapped:" destination="mg9-Gb-TgQ" eventType="touchUpInside" id="4yd-cF-E2J"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -470,6 +474,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="100.5" height="77"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="emotionButtonTapped:" destination="mg9-Gb-TgQ" eventType="touchUpInside" id="yUV-Bi-i6c"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -499,6 +506,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="100.5" height="76.5"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="emotionButtonTapped:" destination="mg9-Gb-TgQ" eventType="touchUpInside" id="5nb-cw-n6o"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -528,6 +538,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="101" height="76.5"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="emotionButtonTapped:" destination="mg9-Gb-TgQ" eventType="touchUpInside" id="fQm-5L-W4x"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -557,6 +570,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="101" height="77"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="emotionButtonTapped:" destination="mg9-Gb-TgQ" eventType="touchUpInside" id="RaV-Yh-P2N"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -586,6 +602,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="101" height="76.5"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="emotionButtonTapped:" destination="mg9-Gb-TgQ" eventType="touchUpInside" id="hrV-yW-CRT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -615,6 +634,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="100.5" height="76.5"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="emotionButtonTapped:" destination="mg9-Gb-TgQ" eventType="touchUpInside" id="EPB-ht-klm"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -644,6 +666,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="100.5" height="77"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="emotionButtonTapped:" destination="mg9-Gb-TgQ" eventType="touchUpInside" id="8p1-jP-1SA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -673,6 +698,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="100.5" height="76.5"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="emotionButtonTapped:" destination="mg9-Gb-TgQ" eventType="touchUpInside" id="Q8i-yJ-X0m"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -729,14 +757,29 @@
                                     <constraint firstAttribute="width" secondItem="bFO-Hw-geA" secondAttribute="height" multiplier="1:1" id="zj9-Fb-lD3"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sld-Wl-7qp">
+                                <rect key="frame" x="160" y="168" width="94" height="73"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="repeat.circle.fill" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="mg9-Gb-TgQ" eventType="touchUpInside" id="LaX-oH-EMs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P6A-Kv-5uG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Sld-Wl-7qp" firstAttribute="top" secondItem="P6A-Kv-5uG" secondAttribute="top" constant="120" id="00S-Oh-gPT"/>
                             <constraint firstItem="P6A-Kv-5uG" firstAttribute="trailing" secondItem="bFO-Hw-geA" secondAttribute="trailing" constant="40" id="4bj-VU-qzr"/>
                             <constraint firstItem="bFO-Hw-geA" firstAttribute="centerX" secondItem="5ec-ky-wKo" secondAttribute="centerX" id="Bsi-7u-eTU"/>
+                            <constraint firstItem="P6A-Kv-5uG" firstAttribute="trailing" secondItem="Sld-Wl-7qp" secondAttribute="trailing" constant="160" id="E92-P1-laT"/>
+                            <constraint firstItem="Sld-Wl-7qp" firstAttribute="centerX" secondItem="5ec-ky-wKo" secondAttribute="centerX" id="Z0x-uL-8te"/>
                             <constraint firstItem="bFO-Hw-geA" firstAttribute="centerY" secondItem="5ec-ky-wKo" secondAttribute="centerY" id="Zmp-vZ-qdC"/>
                             <constraint firstItem="bFO-Hw-geA" firstAttribute="leading" secondItem="P6A-Kv-5uG" secondAttribute="leading" constant="40" id="b2s-2V-Mwr"/>
+                            <constraint firstItem="Sld-Wl-7qp" firstAttribute="leading" secondItem="P6A-Kv-5uG" secondAttribute="leading" constant="160" id="qoD-UQ-ePA"/>
+                            <constraint firstItem="bFO-Hw-geA" firstAttribute="top" secondItem="Sld-Wl-7qp" secondAttribute="bottom" constant="40" id="vRc-f8-aDC"/>
                         </constraints>
                     </view>
                     <connections>
@@ -750,6 +793,7 @@
                         <outlet property="nineLabel" destination="U2h-UB-Fu5" id="RrP-YA-aE0"/>
                         <outlet property="oneButton" destination="Oj4-B4-hFp" id="tUb-YJ-4IU"/>
                         <outlet property="oneLabel" destination="cOi-vB-h50" id="aD5-m3-ed6"/>
+                        <outlet property="resetButton" destination="Sld-Wl-7qp" id="VnT-BK-pe7"/>
                         <outlet property="sevenButton" destination="wfw-t1-bcj" id="ZIa-2E-LDf"/>
                         <outlet property="sevenLabel" destination="0ye-hd-Tl6" id="HVB-yu-SUA"/>
                         <outlet property="sixButton" destination="w11-A3-Ybg" id="HmB-YV-sFK"/>
@@ -767,6 +811,15 @@
                         <outletCollection property="buttonList" destination="wfw-t1-bcj" collectionClass="NSMutableArray" id="eMP-f2-dDu"/>
                         <outletCollection property="buttonList" destination="zuV-Gs-HvZ" collectionClass="NSMutableArray" id="8DV-xk-RLT"/>
                         <outletCollection property="buttonList" destination="bPS-wt-pnf" collectionClass="NSMutableArray" id="2XC-wN-mvY"/>
+                        <outletCollection property="labelList" destination="cOi-vB-h50" collectionClass="NSMutableArray" id="Y5n-N6-Lz3"/>
+                        <outletCollection property="labelList" destination="Hce-bu-JKy" collectionClass="NSMutableArray" id="Zt9-na-CR5"/>
+                        <outletCollection property="labelList" destination="So8-BE-beo" collectionClass="NSMutableArray" id="UpW-9M-gVc"/>
+                        <outletCollection property="labelList" destination="mj6-UW-GKQ" collectionClass="NSMutableArray" id="JOk-9K-DO5"/>
+                        <outletCollection property="labelList" destination="eQb-mN-Fgm" collectionClass="NSMutableArray" id="KXk-fL-rUH"/>
+                        <outletCollection property="labelList" destination="i3R-Ua-E36" collectionClass="NSMutableArray" id="smM-k5-Zki"/>
+                        <outletCollection property="labelList" destination="0ye-hd-Tl6" collectionClass="NSMutableArray" id="lg0-DA-nMe"/>
+                        <outletCollection property="labelList" destination="U63-Oq-Wqj" collectionClass="NSMutableArray" id="WV5-fq-86p"/>
+                        <outletCollection property="labelList" destination="U2h-UB-Fu5" collectionClass="NSMutableArray" id="lI1-z5-su8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfC-W9-cHX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1227,6 +1280,7 @@
         <image name="opticaldiscdrive" catalog="system" width="128" height="88"/>
         <image name="person.2.circle" catalog="system" width="128" height="123"/>
         <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
+        <image name="repeat.circle.fill" catalog="system" width="128" height="123"/>
         <image name="slime1" width="278" height="258"/>
         <image name="smiley" catalog="system" width="128" height="123"/>
         <image name="square.and.pencil.circle" catalog="system" width="128" height="123"/>
